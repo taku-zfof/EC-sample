@@ -1,0 +1,9 @@
+表示分岐用のページです
+
+<%if current_user.email=="master@example"%>
+  <p>あなたは管理者です</p>
+<%else%>
+  <p>あなたはお客様です</p>
+<%end%>
+
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
